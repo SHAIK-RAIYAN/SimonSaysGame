@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Colors Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dark-mode">
+    <button id="toggletbn">&#9728;</button>
+    <header>
+      <h1>Simon Says</h1>
+      <h2 class="levelinfo">How long a sequence can you remember?</h2>
+      <h2 class="highscore">High Score : 0</h2>
+    </header>
+
+    <main>
+      <div class="container">
+        <div
+          onclick="playSound('sound1')"
+          class="btn disabled"
+          id="green"
+          type="button"></div>
+        <div
+          onclick="playSound('sound2')"
+          class="btn disabled"
+          id="red"
+          type="button"></div>
+        <div
+          onclick="playSound('sound3')"
+          class="btn disabled"
+          id="yellow"
+          type="button"></div>
+        <div
+          onclick="playSound('sound4')"
+          class="btn disabled"
+          id="blue"
+          type="button"></div>
+      </div>
+
+      <!-- Audio files -->
+      <audio id="sound1" src="sounds/sound1.mp3" preload="auto"></audio>
+      <audio id="sound2" src="sounds/sound2.mp3" preload="auto"></audio>
+      <audio id="sound3" src="sounds/sound3.mp3" preload="auto"></audio>
+      <audio id="sound4" src="sounds/sound4.mp3" preload="auto"></audio>
+      
+      <button id="startbtn">Start Game</button>
+
+      <div id="countdown-overlay" class="hidden">
+        <div id="countdown-number">3</div>
+      </div>
+    </main>
+
+    <footer></footer>
+    <script src="app.js"></script>
+  </body>
+</html>

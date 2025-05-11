@@ -1,0 +1,132 @@
+* {
+  text-align: center;
+}
+body {
+  background-color: rgb(27, 27, 27);
+  color: white;
+  overflow: hidden;
+  transition: background-color 0.3s;
+}
+
+#toggletbn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  color: #222;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.5s, color 0.5s;
+}
+body.dark-mode {
+  background-color: rgb(27, 27, 27);
+  color: #fff;
+}
+body.light-mode {
+  background-color: #c7d7ee;
+  color: #000000;
+}
+body.light-mode #toggletbn {
+  background: #222222;
+  color: #fff;
+}
+
+.highscore{
+  position: fixed;
+  top: 3.5rem;
+  right: 3.5rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+}
+
+.btn {
+  height: 200px;
+  width: 200px;
+  border: 10px solid whitesmoke;
+  border-radius: 20%;
+  margin: 1rem;
+  cursor: pointer;
+  opacity: 0.4;
+}
+
+#green {
+  background-color: #47a84b;
+}
+
+#red {
+  background-color: #c83737;
+}
+
+#yellow {
+  background-color: #c9e224;
+}
+
+#blue {
+  background-color: #4fa1d3;
+}
+/* Color buttons diabled */
+.btn.disabled {
+  pointer-events: none;
+}
+
+#startbtn {
+  height: 4rem;
+  width: 10rem;
+  border: 4px solid rgb(106, 204, 204);
+  border-radius: 2rem;
+  background-color: rgb(0, 188, 212);
+  color: white;
+  font-size: 20px;
+  transition: transform 0.2s, background-color 0.2s;
+}
+#startbtn:hover {
+  background-color: rgb(0, 157, 174);
+  transform: scale(1.05);
+}
+
+#startbtn:active {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 8px rgb(207, 207, 207);
+}
+
+/* Count Down */
+#countdown-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(8px);
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: white;
+  font-size: 10rem;
+  font-weight: bold;
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+
+/* Game Started JS */
+/* btn clicked */
+.flash {
+  opacity: 1;
+}
+
+.wrongbtn {
+  background-color: red !important;
+}
