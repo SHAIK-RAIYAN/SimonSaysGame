@@ -2,7 +2,8 @@
 
 Welcome to **Simon Says**—a dazzling memory game that challenges you to recall ever-growing sequences of colors! 🌈 Built with vanilla HTML, CSS, and JavaScript, this lightweight web app boasts a sleek design, togglable dark/light modes, immersive sound effects, and high score tracking. Perfect for showcasing front-end prowess or hacking on for fun! 🚀
 
-![Simon Says Game Screenshot](path/to/screenshot.png)
+![Simon Says Game Screenshot](https://github.com/user-attachments/assets/3af2fe8d-898d-45f7-a475-a31ae310ddc3)
+
 
 ---
 
@@ -16,7 +17,7 @@ Welcome to **Simon Says**—a dazzling memory game that challenges you to recall
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started 🛠️
 
 Launch the game in just **two simple steps**:
 
@@ -30,7 +31,7 @@ No frameworks, no fuss—just pure web tech that runs instantly! ⚡
 
 ---
 
-## 🎲 How to Play
+## How to Play 🎲 
 
 1. Click the **"Start Game"** button to kick things off! 🎉
 2. Watch the colors light up in sequence. 👀
