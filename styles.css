@@ -1,11 +1,17 @@
+/* Base styles */
 * {
   text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
 body {
   background-color: rgb(27, 27, 27);
   color: white;
-  overflow: hidden;
+  overflow-x: hidden;
   transition: background-color 0.3s;
+  font-family: Arial, sans-serif;
 }
 
 #toggletbn {
@@ -16,45 +22,57 @@ body {
   color: #222;
   border: none;
   border-radius: 50%;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   font-size: 20px;
   cursor: pointer;
   transition: background 0.5s, color 0.5s;
+  z-index: 101;
 }
+
 body.dark-mode {
   background-color: rgb(27, 27, 27);
   color: #fff;
 }
+
 body.light-mode {
   background-color: #c7d7ee;
   color: #000000;
 }
+
 body.light-mode #toggletbn {
   background: #222222;
   color: #fff;
 }
 
-.highscore{
+header {
+  padding: 2rem 1rem 1rem;
+}
+
+.highscore {
   position: fixed;
-  top: 3.5rem;
-  right: 3.5rem;
+  top: 4.5rem;
+  right: 1.5rem;
+  font-size: 1rem;
 }
 
 .container {
   display: grid;
-  grid-template-columns: auto auto;
-  justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  justify-items: center;
+  margin: 2rem auto;
+  max-width: 500px;
 }
 
 .btn {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   border: 10px solid whitesmoke;
   border-radius: 20%;
-  margin: 1rem;
-  cursor: pointer;
   opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.2s;
 }
 
 #green {
@@ -72,7 +90,7 @@ body.light-mode #toggletbn {
 #blue {
   background-color: #4fa1d3;
 }
-/* Color buttons diabled */
+
 .btn.disabled {
   pointer-events: none;
 }
@@ -86,7 +104,10 @@ body.light-mode #toggletbn {
   color: white;
   font-size: 20px;
   transition: transform 0.2s, background-color 0.2s;
+  margin: 2rem auto;
+  display: block;
 }
+
 #startbtn:hover {
   background-color: rgb(0, 157, 174);
   transform: scale(1.05);
@@ -97,7 +118,6 @@ body.light-mode #toggletbn {
   box-shadow: 0px 0px 8px rgb(207, 207, 207);
 }
 
-/* Count Down */
 #countdown-overlay {
   position: fixed;
   top: 0;
@@ -121,12 +141,61 @@ body.light-mode #toggletbn {
   visibility: hidden;
 }
 
-/* Game Started JS */
-/* btn clicked */
 .flash {
   opacity: 1;
 }
 
 .wrongbtn {
   background-color: red !important;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .btn {
+    width: 120px;
+    height: 120px;
+    border-width: 8px;
+  }
+  #startbtn {
+    width: 80%;
+    font-size: 18px;
+  }
+  .container {
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+  #countdown-overlay {
+    font-size: 6rem;
+  }
+  .highscore {
+    font-size: 0.9rem;
+    right: 1rem;
+    top: 4rem;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  header h2 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn {
+    width: 100px;
+    height: 100px;
+    border-width: 6px;
+  }
+  #countdown-overlay {
+    font-size: 4rem;
+  }
+  #toggletbn {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+  .highscore {
+    font-size: 0.8rem;
+    top: 3.8rem;
+  }
 }
