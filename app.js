@@ -68,7 +68,7 @@ function levelup() {
   level++;
   levelinfo.innerText = `Level ${level}`;
   //select random btn to flash
-  let ranidx = Math.floor(Math.random() * 3);
+  let ranidx = Math.floor(Math.random() * 4);
   let btn = colors[ranidx];
   gameSeq.push(colors[ranidx]);
   btnflash(btn);
