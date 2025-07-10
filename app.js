@@ -1,6 +1,5 @@
 //Button sounds
 
-
 //Game Mode Theme
 // toggle theme
 const toggleBtn = document.querySelector("#toggletbn");
@@ -15,10 +14,13 @@ toggleBtn.addEventListener("click", () => {
   }
 });
 
+let highscore = document.querySelector(".highscore");
+let savedScore = localStorage.getItem("highScore");
+let maxscore = savedScore !== null ? parseInt(savedScore) : 0;
+highscore.innerText = `High Score : ${maxscore}`;
+
 //Start Game button
 let levelinfo = document.querySelector(".levelinfo");
-let maxscore = 0;
-let highscore = document.querySelector(".highscore");
 let startbtn = document.querySelector("#startbtn");
 let countOverlay = document.querySelector("#countdown-overlay");
 let countNum = document.querySelector("#countdown-number");
@@ -118,6 +120,7 @@ function checkAns(idx) {
     if (maxscore < level - 1) {
       maxscore = level - 1;
       highscore.innerText = `High Score : ${maxscore}`;
+      localStorage.setItem("highScore", maxscore);
     }
     resetGame();
   }
